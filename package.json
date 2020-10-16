@@ -1,0 +1,38 @@
+{
+  "name": "perfixin-api",
+  "version": "0.0.1",
+  "description": "The API, Nodejs App that saves and shares your data to your Dashboard.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halilcakar/perfixin-api.git"
+  },
+  "keywords": [
+    "api",
+    "express",
+    "nodejs",
+    "javascript"
+  ],
+  "author": "Halil Çakar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/halilcakar/perfixin-api/issues"
+  },
+  "homepage": "https://github.com/halilcakar/perfixin-api#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.5"
+  },
+  "dependencies": {
+    "cors": "2.8.5",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "mysql": "2.18.1"
+  }
+}
