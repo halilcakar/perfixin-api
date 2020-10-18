@@ -1,4 +1,4 @@
-const { server, app, getCreatedAt, CREATE, GET } = require('./config')
+const { server, app, getCreatedAt, CREATE, GET_ALL, GET_30MIN } = require('./config')
 const connection = require('./database')
 
 app.post('/perfixin/create', (req, res) => {
@@ -13,7 +13,7 @@ app.post('/perfixin/create', (req, res) => {
 })
 
 app.get('/perfixin', (req, res) => {
-  connection.query(GET, (err, result) => {
+  connection.query(GET_ALL, (err, result) => {
     if (err) {
       return res.status(500).json(err)
     }

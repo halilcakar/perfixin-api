@@ -31,7 +31,8 @@ server.listen(PORT || 8080, () => {
 
 const TABLE_NAME = 'perf'
 const CREATE = `INSERT INTO ${TABLE_NAME} SET ?`
-const GET = `SELECT * FROM ${TABLE_NAME} WHERE created_at > date_sub(now(), interval 30 minute);`
+const GET_ALL = `SELECT * FROM ${TABLE_NAME}`
+const GET_30MIN = `SELECT * FROM ${TABLE_NAME} WHERE created_at > date_sub(now(), interval 30 minute);`
 
 const getCreatedAt = () => {
   let date = new Date();
@@ -40,5 +41,5 @@ const getCreatedAt = () => {
 
 module.exports = {
   app, server, getCreatedAt,
-  CREATE, GET
+  CREATE, GET_ALL, GET_30MIN
 }
